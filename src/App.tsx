@@ -2,12 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios'
-import Axios from 'axios';
 
 function App() {
 
   function clickTest() {
-    Axios.get('https://netcore.miniprogram.icu/WeatherForecast').then(m => alert(m)).then(e => { alert('error click') })
+    alert('click');
+    axios.get('https://netcore.miniprogram.icu/WeatherForecast')
+      .then(m => alert(m)).then(e => { alert('error click') });
   }
 
   return (
@@ -25,7 +26,7 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={ }></button>
+        <button onClick={clickTest}> tset </button>
       </header>
     </div>
   );
