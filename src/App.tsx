@@ -8,7 +8,12 @@ function App() {
   function clickTest() {
     alert('click');
     axios.get('https://netcore.miniprogram.icu/WeatherForecast')
-      .then(m => alert(m)).then(e => { alert('error click') });
+      .then(m => alert(m.data));
+
+    alert('test fetch');
+    fetch('https://netcore.miniprogram.icu/WeatherForecast')
+      .then(Response => Response.json())
+      .then(data => alert(data));
   }
 
   return (
